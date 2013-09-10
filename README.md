@@ -1,0 +1,3 @@
+Game Analytics for Laravel 4
+
+More info soon... 
