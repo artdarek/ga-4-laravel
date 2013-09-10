@@ -4,7 +4,7 @@ Full docs will be created soon...
 
 Usage example:
 
-``php
+```php
 	
 	// data to send 
     $userData = [
@@ -16,10 +16,11 @@ Usage example:
 	    "friend_count" => 7
     ];
 
-``	
+```
+
 Send data to ``user`` category:
 
-``php
+```php
 
 	// send data to user category using query() method:
     $ga = GameAnalytics::query('user', $userData)->send();
@@ -27,4 +28,4 @@ Send data to ``user`` category:
 	// send data to user category using queryUser() method:
     $ga = GameAnalytics::queryUser($userData)->send();
 
-``
+```
