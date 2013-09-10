@@ -29,3 +29,5 @@ Send data to ``user`` category:
     $ga = GameAnalytics::queryUser($userData)->send();
 
 ```
+
+You can use these methods to send data to other categories: ``queryDesign()``, ``queryBusiness()``, ``queryQuality()`` or just pass as a first parameter of ``query()`` method name of the category (user, business, design, quality).
