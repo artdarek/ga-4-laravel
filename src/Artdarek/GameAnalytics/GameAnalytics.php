@@ -219,7 +219,6 @@ class GameAnalytics {
 		return $this->query('quality', $data);
 	}
 
-
 	/**
 	 * Set category 
 	 * 
@@ -294,6 +293,5 @@ class GameAnalytics {
 
 		return $response;
 	}
-
 
 }
