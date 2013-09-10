@@ -42,9 +42,9 @@ class GameAnalytics {
 	/**
 	 * Handler
 	 * 
-	 * @var array
+	 * @var object
 	 */
-	private $handler = 'Curl';
+	private $handler;
 
 	/**
 	 * Data
@@ -56,10 +56,24 @@ class GameAnalytics {
 	/**
 	 * Constructor
 	 *
-	 * @param Handler $handler - Handler object
+	 * @param string $handler - Handler name
 	 * @return void
 	 */
 	public function __construct( $handler ) { 
+
+		$allowedHandlers = ['Curl'];
+
+		if ( !in_array($handler, $allowedHandlers) ) {
+			throw new \Exception('You have to use one of this handlers: Curl');
+		} 
+
+		// generate class name of handler including namespaces
+		$handlerName = 'Artdarek\GameAnalytics\Handlers\\'.$handler;		
+
+		// create handler instance
+		$handler = new $handlerName;
+
+		// save handler in object variable
 		$this->handler = $handler;
 	}
 

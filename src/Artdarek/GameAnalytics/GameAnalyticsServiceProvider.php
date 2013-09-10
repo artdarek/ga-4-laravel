@@ -52,10 +52,7 @@ class GameAnalyticsServiceProvider extends ServiceProvider {
 		    		}
 
         		// create mew gameanalytics node
-
-        			$handlerName = 'Artdarek\GameAnalytics\Handlers\\'.$handler;
-
-        			$ga = new GameAnalytics( new $handlerName );
+        			$ga = new GameAnalytics( $handler );
         			$ga->setSecret( $secret );
         			$ga->setVersion( $version );
         			$ga->setKey( $key );
