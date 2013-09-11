@@ -101,10 +101,6 @@ Set your GameAnalytics credentials in ``app/config/packages/artdarek/ga-4-larave
 
 ## Usage
 
-Nodes are the first of the two major entity types in a graph database. 
-A node is a collection of zero or more key-value pairs. 
-Neo4jPHP makes it very easy to create and work with nodes.
-
 ### Sending data to GameAnalytics
 
 ```php
@@ -133,8 +129,7 @@ Send data to ``user`` category:
 
 ```
 
-You can use these methods to send data to other categories: ``queryDesign()``, ``queryBusiness()``, ``queryQuality()`` 
-or just pass name of the category (user, business, design, quality) as first parameter of ``query()`` method.
+You can use these methods to send data to other categories: ``queryDesign()``, ``queryBusiness()``, ``queryQuality()`` or just pass name of the category (user, business, design, quality) as first parameter of ``query()`` method.
 
 ### More usage examples
 
