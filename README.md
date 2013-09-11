@@ -30,4 +30,5 @@ Send data to ``user`` category:
 
 ```
 
-You can use these methods to send data to other categories: ``queryDesign()``, ``queryBusiness()``, ``queryQuality()`` or just pass as a first parameter of ``query()`` method name of the category (user, business, design, quality).
+You can use these methods to send data to other categories: ``queryDesign()``, ``queryBusiness()``, ``queryQuality()`` 
+or just pass name of the category (user, business, design, quality) as first parameter of ``query()`` method.
