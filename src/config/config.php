@@ -10,7 +10,7 @@ return array(
 	'game' => array(
 
 		/**
-		 * API Key
+		 * Your Game Key
 		 */
 		'key' => '',
 

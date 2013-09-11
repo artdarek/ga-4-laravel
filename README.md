@@ -35,7 +35,7 @@ $ composer update
 
 ### Registering the Package
 
-Add the Neo4j-4-laravel Service Provider to your config in ``app/config/app.php``:
+Add the ga-4-laravel Service Provider to your config in ``app/config/app.php``:
 
 ```php
 'providers' => array(
@@ -51,25 +51,44 @@ package config file which you can be generated through command line by artisan (
 
 #### Option 1: Configure GameAnalytics Service Provider using ``app/config/gameanalytics.php`` file 
 
-Simply add this code at the end of your ``app/config/gameanalytics.php`` file:
+Create new config file in ``app/config/`` directory and name it ``gameanalytics.php``. Now simply edit created file and put there below code: 
 
 ```php
+
 	/*
 	|--------------------------------------------------------------------------
-	| Neo4j Databases
+	| GameAnalytics Config
 	|--------------------------------------------------------------------------
 	*/
+	'game' => array(
 
-	'neo4j' => [
-		'default' => [
-			'host'     => 'localhost',
-			'port'     => 7474,
-			'username' => null,
-			'password' => null,
-		],
-	],
+		/**
+		 * Your Game Key
+		 */
+		'key' => '',
+
+		/**
+		 * Secret
+		 */	
+		'secret' => '', 
+
+	),
+
+	'api' => array(
+
+		/**
+		 * API version
+		 */
+		'version' => 1
+	),
+
+	/**
+	 * Handler [Default: Curl]
+	 */
+	'handler' => 'Curl',
 
 ```
+
 #### Option 2: Configure GameAnalytics Service Provider using package config file
 
 Run on the command line from the root of your project:
@@ -78,36 +97,7 @@ Run on the command line from the root of your project:
 $ php artisan config:publish artdarek/ga-4-laravel
 ```
 
-Set your ga-4-laravel credentials in ``app/config/packages/artdarek/ga-4-laravel/config.php``
-
-```php
-return array( 
-
-	/*
-	|--------------------------------------------------------------------------
-	| Neo4j Config
-	|--------------------------------------------------------------------------
-	*/
-	'default' => array(
-
-		/**
-		 * Host
-		 */
-		'host' => 'localhost',
-
-		/**
-		 * Port
-		 */	
-		'port' => 7474, 
-
-		/**
-		 * Credentials
-		 */
-		'username' => null,
-		'password' => null 
-
-	),
-```
+Set your GameAnalytics credentials in ``app/config/packages/artdarek/ga-4-laravel/config.php``
 
 ## Usage
 
