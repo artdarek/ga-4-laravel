@@ -158,12 +158,12 @@ class GameAnalytics {
 	/**
 	 * Get endpoint url 
 	 * 
-	 * @return string $url
+	 * @return string $endpoint
 	 */
-	public function getUrl() {
+	public function getEndpoint() {
 
-		$url = self::HOST ."/". $this->getVersion() ."/". $this->getKey() ."/". $this->getCategory();
-		return $url;
+		$endpoint = self::HOST ."/". $this->getVersion() ."/". $this->getKey() ."/". $this->getCategory();
+		return $endpoint;
 	}
 
 	/**
@@ -283,7 +283,7 @@ class GameAnalytics {
 	public function send() {
 
 		$handler = $this->handler;
-		$handler->setUrl( $this->getUrl() );
+		$handler->setEndpoint( $this->getEndpoint() );
 		$handler->setData( $this->getData() );
 		$handler->setSecret( $this->getSecret() );
 		$handler->flush();

@@ -4,7 +4,7 @@ use Artdarek\GameAnalytics\Handlers\Handler as Handler;
 
 abstract class Handler {
 
-	protected $url = '';
+	protected $endpoint = '';
 
 	protected $data = [];
 	
@@ -27,13 +27,13 @@ abstract class Handler {
 	abstract public function flush();
 
 	/**
-	 * Set url
+	 * Set endpoint
 	 *
 	 * @param string $url
  	 * @return void
 	 */
-	public function setUrl( $url ) {
-		$this->url = $url;
+	public function setEndpoint( $url ) {
+		$this->endpoint = $url;
 	}
 	
 	/**

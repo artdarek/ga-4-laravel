@@ -4,7 +4,7 @@ use Artdarek\GameAnalytics\Handlers\Handler as Handler;
 
 class Curl extends Handler {
 
-	protected $url = '';
+	protected $endpoint = '';
 
 	protected $data = [];
 	
@@ -21,7 +21,7 @@ class Curl extends Handler {
 
 		$ch = curl_init(); 
 
-		curl_setopt($ch, CURLOPT_URL, $this->url ); 
+		curl_setopt($ch, CURLOPT_URL, $this->endpoint ); 
 		curl_setopt($ch, CURLOPT_POST, true); 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $this->getMessage() ); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: ".$this->getAuthorization() )); 
