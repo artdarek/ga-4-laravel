@@ -3,7 +3,7 @@
     "type": "library",    
     "description": "Game Analytics API Service Provider for Laravel 4.",
     "keywords": ["Game Analytics","GameAnalytics.com","Game Analytics API","Analytics","Laravel","Laravel4","Laravel 4","Service Provider","PHP"],
-    "homepage": "https://github.com/artdarek/gravatarer",    
+    "homepage": "https://github.com/artdarek/ga-4-laravel",    
     "license": "MIT",    
     "authors": [
         {
